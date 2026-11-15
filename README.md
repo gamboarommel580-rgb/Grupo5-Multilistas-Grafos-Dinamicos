@@ -46,7 +46,7 @@ src/
   pruebas/  PruebasGrafo.java                   67 pruebas sin JUnit
 docs/
   Observaciones_presentacion.md                 correcciones a las diapositivas
-  Grafo_original.java                           el codigo antes de los cambios
+  Grafo_original.txt                            el codigo antes de los cambios (en .txt para que no se compile)
 ```
 
 ## Operaciones y costo
@@ -109,7 +109,7 @@ java -cp out app.RetoSolucion
 
 ## Cambios respecto al código que presentamos
 
-El código original está en `docs/Grafo_original.java`. Lo revisamos y estos son los cambios:
+El código original está en `docs/Grafo_original.txt`. Lo revisamos y estos son los cambios:
 
 1. Se separó en capas `app -> negocio -> modelo`, como dice la diapositiva, en vez de tener todo en un archivo.
 2. El BFS usaba `Queue`, `LinkedList` y `HashSet` de Java, y el DFS usaba `HashSet` para los visitados. Eso choca con la regla del reto (prohibido usar colecciones de Java) y con el proyecto final, que pide estructuras propias. Ahora la cola se enlaza con el campo `sigCola` de cada vértice (cada uno entra a la cola una sola vez, así que no hace falta otra clase nodo) y el visitado es una marca dentro de cada vértice.
