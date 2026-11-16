@@ -120,7 +120,3 @@ El código original está en `docs/Grafo_original.txt`. Lo revisamos y estos son
 7. Se agregaron 67 pruebas con los casos límite del reto.
 8. `buscar` ahora es privado. Antes devolvía el nodo y desde `app` se podía romper la lista con `setSig(null)`; para preguntar si un vértice existe está `existeVertice`.
 9. El BFS armaba el texto de la cola en cada paso aunque nadie pidiera la traza, y eso lo volvía O(V²) en un grafo estrella. Ahora solo lo arma `trazaBfs`.
-
-## Uso de IA
-
-Usamos un asistente de IA para revisar el código, encontrar el error de `esConexo` y escribir las pruebas. La estructura del grafo, los nombres de los métodos y el orden de la exposición son los del grupo. Cualquier integrante puede explicar cualquier método.
